@@ -1,0 +1,162 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4em;
+}
+
+.container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  flex-flow: row wrap;
+}
+h1 {
+  flex-basis: 100%;
+  margin-top: 8vh;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  height: 60vh;
+  width: 60vw;
+  flex-flow: row wrap;
+  flex-basis: 60%;
+}
+.result {
+  flex-basis: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-flow: row wrap;
+  height: 60vh;
+  margin-left: 5vw;
+}
+@media (max-width: 500px) {
+  .grid {
+    flex-basis: 90%;
+    height: 80vh;
+  }
+  .result {
+    flex-basis: 90%;
+    height: 5vh;
+  }
+  .scoreboard {
+    flex-basis: 40%;
+    display: flex;
+  }
+  .scoreboard > p,
+  span {
+    flex: 1 0 50%;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+}
+span {
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: 1em;
+  flex-basis: 30%;
+}
+#score-1 {
+  color: blue;
+}
+#score-2 {
+  color: red;
+}
+.box {
+  flex: 1 0 33%;
+  min-height: 20px;
+  min-width: 20px;
+  height: 33%;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 2em;
+}
+.box:hover {
+  cursor: pointer;
+  background-color: rgba(0, 255, 0, 0.2);
+}
+.scoreboard {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scoreboard:first-child {
+  box-shadow: 2px rgba(0, 0, 0, 0.25);
+}
+
+.box.filled:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+/*creating the grid*/
+#box-1 {
+  border-bottom: 8px black solid;
+  border-right: 8px black solid;
+}
+#box-2 {
+  border-bottom: 8px black solid;
+}
+#box-3 {
+  border-bottom: 8px black solid;
+  border-left: 8px black solid;
+}
+#box-4 {
+  border-bottom: 8px black solid;
+  border-right: 8px black solid;
+}
+#box-5 {
+  border-bottom: 8px black solid;
+}
+#box-6 {
+  border-left: 8px black solid;
+  border-bottom: 8px black solid;
+}
+#box-7 {
+  border-right: 8px black solid;
+}
+/*box-8 doesn't need any additional borders*/
+#box-9 {
+  border-left: 8px black solid;
+}
+.starting-screen {
+  background: white;
+  height: 85%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+button {
+  padding: 1.4em;
+  background: rgba(0, 0, 0, 0.07);
+  margin: 8%;
+  font-weight: 1.2em;
+}
+button:hover {
+  transform: scale(1.15);
+}
+.pvp-mode:hover {
+  box-shadow: 3px 2px 2px rgba(255, 0, 0, 0.4);
+}
+.ai-mode:hover {
+  box-shadow: 3px 2px 2px rgba(218, 165, 32, 0.6);
+}
